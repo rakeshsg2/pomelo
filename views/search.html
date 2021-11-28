@@ -1,0 +1,104 @@
+<h1>{{formatNumber results.total_count}} repository results</h1>
+<table cellpadding="5" width="100%">
+  {{#each results.items}}
+  <tr>
+    <td>
+        <a href="{{html_url}}">{{full_name}}</a> <span><sup>{{#if archived}}Public archive{{/if}}</sup></span>
+        <br/>
+        {{description}}
+        <br/>
+        <span> Stars: {{stargazers_count}}, </span> 
+        <span> Language: {{language}}, </span> 
+        <span> Updated on {{formatDate pushed_at}}</span>
+        <hr/>
+    </td>
+  </tr>
+  {{/each}}
+</table> 
+<p>
+  <span>
+    <a {{#if results.previousPageDisabled}} href="/search?q={{results.q}}&p={{results.previousPage}}&o={{results.o}}&s={{results.s}}" {{/if}}>
+      Previous
+    </a>
+  </span>
+  &nbsp;
+ 
+
+  {{#if results.previousPage4}}
+  <span>
+    <a href="/search?q={{results.q}}&p={{results.previousPage4}}&o={{results.o}}&s={{results.s}}">
+      {{results.previousPage4}}
+    </a>
+  </span>
+  {{/if}}
+  &nbsp;
+  {{#if results.previousPage3}}
+  <span>
+    <a href="/search?q={{results.q}}&p={{results.previousPage3}}&o={{results.o}}&s={{results.s}}">
+      {{results.previousPage3}}
+    </a>
+  </span>
+  {{/if}}
+  &nbsp;
+  {{#if results.previousPage2}}
+  <span>
+    <a href="/search?q={{results.q}}&p={{results.previousPage2}}&o={{results.o}}&s={{results.s}}">
+      {{results.previousPage2}}
+    </a>
+  </span>
+  {{/if}}
+  &nbsp;
+  {{#if results.previousPage1}}
+  <span>
+    <a href="/search?q={{results.q}}&p={{results.previousPage1}}&o={{results.o}}&s={{results.s}}">
+      {{results.previousPage1}}
+    </a>
+  </span>
+  {{/if}}  
+
+
+  &nbsp;
+  <span>
+    {{results.currentPageNo}}
+  </span>
+
+  &nbsp;
+
+  {{#if results.nextPage1}}
+  <span>
+    <a href="/search?q={{results.q}}&p={{results.nextPage1}}&o={{results.o}}&s={{results.s}}">
+      {{results.nextPage1}}
+    </a>
+  </span>
+  {{/if}}
+  &nbsp;
+  {{#if results.nextPage2}}
+  <span>
+    <a href="/search?q={{results.q}}&p={{results.nextPage2}}&o={{results.o}}&s={{results.s}}">
+      {{results.nextPage2}}
+    </a>
+  </span>
+  {{/if}}
+  &nbsp;
+  {{#if results.nextPage3}}
+  <span>
+    <a href="/search?q={{results.q}}&p={{results.nextPage3}}&o={{results.o}}&s={{results.s}}">
+      {{results.nextPage3}}
+    </a>
+  </span>
+  {{/if}}
+  &nbsp;
+  {{#if results.nextPage4}}
+  <span>
+    <a href="/search?q={{results.q}}&p={{results.nextPage4}}&o={{results.o}}&s={{results.s}}">
+      {{results.nextPage4}}
+    </a>
+  </span>
+  {{/if}}
+  &nbsp;
+  <span>
+    <a {{#if results.lastPageDisabled}} href="/search?q={{results.q}}&p={{results.nextPage}}&o={{results.o}}&s={{results.s}}"  {{/if}}>
+      Next
+    </a>
+  </span>
+</p>

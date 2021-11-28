@@ -1,0 +1,26 @@
+{
+  "name": "pomelo",
+  "version": "1.0.0",
+  "description": "pomelo technical test",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "lab -v **/*.test.js"
+  },
+  "author": "rakesh",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/hapi": "^20.2.1",
+    "@hapi/inert": "^6.0.4",
+    "@hapi/vision": "^6.1.0",
+    "axios": "^0.24.0",
+    "handlebars": "^4.7.7",
+    "hapi-swagger": "^14.2.4",
+    "joi": "^17.4.2",
+    "moment": "^2.29.1"
+  },
+  "devDependencies": {
+    "@hapi/code": "^8.0.5",
+    "@hapi/lab": "^24.4.0"
+  }
+}
