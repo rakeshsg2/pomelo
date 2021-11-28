@@ -46,8 +46,6 @@ const routes = () => [{
     method: 'GET', //Github search route
     path: '/search', 
     options: {
-            tags: ['webroute'],
-            description: 'Web page allowing github repository search',
             plugins: {
                 'hapi-swagger': {
                     payloadType: 'form'

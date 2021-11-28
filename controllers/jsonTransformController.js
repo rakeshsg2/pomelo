@@ -8,14 +8,15 @@ const flattenArrayFn = (values) => values.reduce(
 );
 
 // function to transform the json to desired array output
-exports.transformJSON = (json='{}') => {
+exports.transformJSON = (json={}) => {
     let indexMap = {}; // use index of property instead
     let outputArray = []; // Store final output
  
     try {
         
         // parse the object and get rid of the number keys
-        json = Object.values(JSON.parse(json));
+        json = (typeof(json) !== 'object') ? JSON.parse(json) : json;
+        json = Object.values(json);
 
         // convert it to a 2-D array as per the desired output which will also help in creating the index map of each item
         let flattenArray = flattenArrayFn(json);
